@@ -1,89 +1,276 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Regole della Casa</title>
-  <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: #f1f1f1;
-      margin: 0;
-      padding: 2rem;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      padding: 2rem;
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #444;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8em;
-      color: #777;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>AP Rents – Regole della Casa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f7f7f7;
+            padding: 2rem;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.4rem;
+            color: #2c3e50;
+        }
+        h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .lang-select {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lang-select button {
+            margin: 0 5px;
+            font-size: 1.1rem;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            background: #eee;
+            cursor: pointer;
+        }
+        .lang-select button:hover {
+            background: #ccc;
+        }
+        .lang-block {
+            display: none;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .lang-block.active {
+            display: block;
+        }
+        section {
+            margin-top: 1.5rem;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>📜 Regole della Casa</h1>
+<div class="container">
+    <h1>🏡 Benvenuto in <strong>AP Rents</strong>!</h1>
+    <h2>Regole della Casa • House Rules • Règlement Intérieur • Reglas de la Casa</h2>
 
-    <section>
-      <h2>Regole Generali</h2>
-      <ul>
-        <li>Non si fuma all'interno.</li>
-        <li>Silenzio dopo le 22:00.</li>
-        <li>Ognuno è responsabile delle proprie azioni.</li>
-      </ul>
-    </section>
+    <div class="lang-select">
+        <label>🌍 Seleziona lingua:</label>
+        <button onclick="switchLang('it')">🇮🇹</button>
+        <button onclick="switchLang('en')">🇬🇧</button>
+        <button onclick="switchLang('fr')">🇫🇷</button>
+        <button onclick="switchLang('es')">🇪🇸</button>
+    </div>
 
-    <section>
-      <h2>Cucina</h2>
-      <ul>
-        <li>Lavare i piatti dopo l'uso.</li>
-        <li>Non lasciare cibo deperibile fuori dal frigo.</li>
-        <li>Etichettare il proprio cibo.</li>
-      </ul>
-    </section>
+    <!-- 🇮🇹 Italiano -->
+    <div id="content-it" class="lang-block active">
+        <section>
+            <h3>👋 Benvenuti!</h3>
+            <p>Siamo Antonio e Pierpaolo, i vostri host. Potete contattarci per qualsiasi necessità:</p>
+            <ul>
+                <li>📞 Antonio: +39 388 2596015</li>
+                <li>📞 Pierpaolo: +39 379 2714735</li>
+            </ul>
+        </section>
+        <section>
+            <h3>🚨 Numeri d’emergenza</h3>
+            <ul>
+                <li>🚑 Ambulanza: 118</li>
+                <li>🚒 Vigili del fuoco: 115</li>
+                <li>👮‍♂️ Polizia: 113</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📜 Regole della Casa</h3>
+            <ul>
+                <li>🚭 Vietato fumare all’interno</li>
+                <li>🎉 Vietate feste o eventi</li>
+                <li>🧹 Tenere ordinata la propria stanza</li>
+                <li>🚫 Non introdurre ospiti esterni</li>
+                <li>🔥 Non usare la stufa o il forno</li>
+                <li>🔌 Usare la corrente con rispetto</li>
+                <li>🤫 Rispettare le ore di silenzio</li>
+                <li>🚪 Non forzare porte chiuse</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📺 Istruzioni</h3>
+            <ul>
+                <li>💡 Scaldabagni: spegnerli quando non servono</li>
+                <li>📺 TV: accendere da sotto e usare Chromecast</li>
+                <li>🗑️ Spazzatura: usare i punti indicati (vedi FOTO)</li>
+                <li>📶 Wi-Fi: [aggiungi info]</li>
+                <li>❄️ A/C: un solo telecomando, svuotare i bidoni</li>
+                <li>🚪 Check-out: buttare rifiuti, spegnere tutto, chiavi sul tavolo</li>
+            </ul>
+        </section>
+    </div>
 
-    <section>
-      <h2>Bagno</h2>
-      <ul>
-        <li>Lasciare pulito dopo l'uso.</li>
-        <li>Non lasciare asciugamani a terra.</li>
-        <li>Segnalare eventuali problemi (es. acqua, scarichi).</li>
-      </ul>
-    </section>
+    <!-- 🇬🇧 English -->
+    <div id="content-en" class="lang-block">
+        <section>
+            <h3>👋 Welcome!</h3>
+            <p>We are Antonio and Pierpaolo, your hosts. Contact us anytime:</p>
+            <ul>
+                <li>📞 Antonio: +39 388 2596015</li>
+                <li>📞 Pierpaolo: +39 379 2714735</li>
+            </ul>
+        </section>
+        <section>
+            <h3>🚨 Emergency Numbers</h3>
+            <ul>
+                <li>🚑 Ambulance: 118</li>
+                <li>🚒 Fire Brigade: 115</li>
+                <li>👮‍♂️ Police: 113</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📜 House Rules</h3>
+            <ul>
+                <li>🚭 No smoking inside</li>
+                <li>🎉 No parties or events</li>
+                <li>🧹 Keep your room tidy</li>
+                <li>🚫 No unregistered guests</li>
+                <li>🔥 Do not use heater or oven</li>
+                <li>🔌 Use electricity responsibly</li>
+                <li>🤫 Respect quiet hours</li>
+                <li>🚪 Do not force locked doors</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📺 Instructions</h3>
+            <ul>
+                <li>💡 Water heater: turn off if unused</li>
+                <li>📺 TV: bottom button + Chromecast remote</li>
+                <li>🗑️ Trash: use designated bins (see PHOTO)</li>
+                <li>📶 Wi-Fi: [add info]</li>
+                <li>❄️ A/C: one remote, empty water containers</li>
+                <li>🚪 Check-out: trash out, shut everything, keys on table</li>
+            </ul>
+        </section>
+    </div>
+    <!-- 🇫🇷 Français -->
+    <div id="content-fr" class="lang-block">
+        <section>
+            <h3>👋 Bienvenue !</h3>
+            <p>Nous sommes Antonio et Pierpaolo, vos hôtes. Contactez-nous pour toute question :</p>
+            <ul>
+                <li>📞 Antonio : +39 388 2596015</li>
+                <li>📞 Pierpaolo : +39 379 2714735</li>
+            </ul>
+        </section>
+        <section>
+            <h3>🚨 Numéros d'urgence</h3>
+            <ul>
+                <li>🚑 Ambulance : 118</li>
+                <li>🚒 Pompiers : 115</li>
+                <li>👮‍♂️ Police : 113</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📜 Règlement intérieur</h3>
+            <ul>
+                <li>🚭 Interdiction de fumer à l'intérieur</li>
+                <li>🎉 Fêtes et événements interdits</li>
+                <li>🧹 Garder sa chambre propre</li>
+                <li>🚫 Pas d'invités non enregistrés</li>
+                <li>🔥 Ne pas utiliser le poêle ou le four</li>
+                <li>🔌 Utilisation responsable de l’électricité</li>
+                <li>🤫 Respecter les heures de silence</li>
+                <li>🚪 Ne pas forcer les portes fermées</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📺 Instructions</h3>
+            <ul>
+                <li>💡 Chauffe-eau : éteindre s’il n’est pas utilisé</li>
+                <li>📺 TV : bouton en bas + télécommande Chromecast</li>
+                <li>🗑️ Déchets : utilisez les zones désignées (voir PHOTO)</li>
+                <li>📶 Wi-Fi : [ajouter les infos]</li>
+                <li>❄️ Climatisation : une télécommande, vider les réservoirs</li>
+                <li>🚪 Check-out : jeter les déchets, tout éteindre, clés sur la table</li>
+            </ul>
+        </section>
+    </div>
+    <!-- 🇪🇸 Español -->
+    <div id="content-es" class="lang-block">
+        <section>
+            <h3>👋 ¡Bienvenidos!</h3>
+            <p>Somos Antonio y Pierpaolo, tus anfitriones. Contáctanos para cualquier cosa:</p>
+            <ul>
+                <li>📞 Antonio: +39 388 2596015</li>
+                <li>📞 Pierpaolo: +39 379 2714735</li>
+            </ul>
+        </section>
+        <section>
+            <h3>🚨 Números de emergencia</h3>
+            <ul>
+                <li>🚑 Ambulancia: 118</li>
+                <li>🚒 Bomberos: 115</li>
+                <li>👮‍♂️ Policía: 113</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📜 Reglas de la Casa</h3>
+            <ul>
+                <li>🚭 Prohibido fumar en el interior</li>
+                <li>🎉 Prohibido hacer fiestas o eventos</li>
+                <li>🧹 Mantén tu habitación limpia</li>
+                <li>🚫 No se permiten invitados externos</li>
+                <li>🔥 No usar la estufa ni el horno</li>
+                <li>🔌 Usar la electricidad con responsabilidad</li>
+                <li>🤫 Respetar las horas de silencio</li>
+                <li>🚪 No forzar puertas cerradas</li>
+            </ul>
+        </section>
+        <section>
+            <h3>📺 Instrucciones</h3>
+            <ul>
+                <li>💡 Calentadores: apágalos si no los usas</li>
+                <li>📺 TV: botón inferior + control de Chromecast</li>
+                <li>🗑️ Basura: usa los puntos designados (ver FOTO)</li>
+                <li>📶 Wi-Fi: [agrega la información]</li>
+                <li>❄️ Aire acondicionado: un mando para ambos, vacía los depósitos</li>
+                <li>🚪 Check-out: tirar la basura, apagar todo, llaves sobre la mesa</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Puoi aggiungere <div id="content-fr"> e <div id="content-es"> allo stesso modo -->
 
     <footer>
-      Ultimo aggiornamento: Maggio 2025<br>
-      Per dubbi: contattare il referente della casa.
+        Ultimo aggiornamento: Maggio 2025 · AP Rents ©
     </footer>
-  </div>
+</div>
+
+<script>
+    function switchLang(lang) {
+        ['it', 'en', 'fr', 'es'].forEach(code => {
+            const el = document.getElementById('content-' + code);
+            if (el) el.classList.remove('active');
+        });
+        const show = document.getElementById('content-' + lang);
+        if (show) show.classList.add('active');
+    }
+</script>
 </body>
 </html>
